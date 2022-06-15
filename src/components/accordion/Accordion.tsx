@@ -8,6 +8,7 @@ type AccordionPropsType = {
 }
 
 export const Accordion = ({title, collapsed}: AccordionPropsType) => {
+
     return <div>
         <AccordionTitle title={title}/>
         {!collapsed && <AccordionBody/>}

@@ -2,10 +2,11 @@ import React from 'react';
 
 type AccordionTitlePropsType = {
     title: string
+    click?: () => void
 }
 
-export const AccordionTitle = ({title}: AccordionTitlePropsType) => {
+export const AccordionTitle = ({title, click}: AccordionTitlePropsType) => {
     return (
-        <h3>{title}</h3>
+        <h3 onClick={click}>{title}</h3>
     );
 };

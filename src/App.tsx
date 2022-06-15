@@ -7,9 +7,12 @@ function App() {
     return (
         <div className="App">
             <Rating value={1}/>
-            <Accordion title={'Menu'} value={true}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
             <Rating value={4}/>
-            <Accordion title={'Users'} value={false}/>
+            <Rating value={5}/>
+            <Accordion title={'Menu'} collapsed={false}/>
+            <Accordion title={'Users'} collapsed={true}/>
         </div>
     );
 }

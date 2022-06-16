@@ -2,7 +2,7 @@ import React from 'react';
 
 type AccordionTitlePropsType = {
     title: string
-    click?: () => void
+    click: () => void
 }
 
 export const AccordionTitle = ({title, click}: AccordionTitlePropsType) => {

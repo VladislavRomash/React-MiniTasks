@@ -6,7 +6,5 @@ type StarPropsType = {
 }
 
 export const Star = ({selected, click}: StarPropsType) => {
-    return selected
-        ? <span onClick={click}><strong>star </strong></span>
-        : <span onClick={click}>star </span>
+    return <span onClick={click}>{selected ? <strong>star </strong> : 'star '}</span>
 };

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-type OnOffOnPropsType = {
-    selector: boolean
-    click: (value: boolean) => void
-}
+export const UncontrolledOnOffOn = () => {
 
-export const OnOffOn = ({selector, click}: OnOffOnPropsType) => {
+    const [selector, setSelector] = useState<boolean>(true)
+
+    const onClickHandlerOn = () => {
+        setSelector(true)
+    }
+    const onClickHandlerOff = () => {
+        setSelector(false)
+    }
 
     const styleOn = {
         width: '50px',
@@ -36,8 +40,8 @@ export const OnOffOn = ({selector, click}: OnOffOnPropsType) => {
 
     return (
         <div>
-            <div style={styleOn} onClick={() => click(selector)}>on</div>
-            <div style={styleOff} onClick={() => click(selector)}>off</div>
+            <div style={styleOn} onClick={onClickHandlerOn}>on</div>
+            <div style={styleOff} onClick={onClickHandlerOff}>off</div>
             <div style={styleIndicator}/>
         </div>
     );

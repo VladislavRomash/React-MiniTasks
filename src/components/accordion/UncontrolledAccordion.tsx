@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 import {AccordionTitle} from './AccordionTitle';
 import {AccordionBody} from './AccordionBody';
 
-type UncontrolledAccordionPropsType = {
-    title: string
-}
 
-export const UncontrolledAccordion = ({title}: UncontrolledAccordionPropsType) => {
+export const UncontrolledAccordion = () => {
+
+    const headerTitle = '--Users--'
 
     const [expansion, setExpansion] = useState<boolean>(true)
 
@@ -16,7 +15,7 @@ export const UncontrolledAccordion = ({title}: UncontrolledAccordionPropsType) =
 
     return (
         <div>
-            <AccordionTitle title={title} click={onClickHandler}/>
+            <AccordionTitle title={headerTitle} click={onClickHandler}/>
             {!expansion && <AccordionBody/>}
         </div>
     );

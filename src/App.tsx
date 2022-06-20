@@ -6,6 +6,7 @@ import {OnOffOn} from './components/onOffOn/OnOffOn';
 import {UncontrolledAccordion} from './components/accordion/UncontrolledAccordion';
 import {NumbersType, UncontrolledRating} from './components/rating/UncontrolledRating';
 import {UncontrolledOnOffOn} from './components/onOffOn/UncontrolledOnOffOn';
+import {UncontrolledInput} from './components/input/UncontrolledInput';
 
 function App() {
     const [numbers, setNumbers] = useState<NumbersType>(0)
@@ -34,6 +35,7 @@ function App() {
             <OnOffOn selector={selector} click={changeSwitch}/>
             <UncontrolledOnOffOn/>
             <hr/>
+            <UncontrolledInput/>
         </div>
     );
 }
